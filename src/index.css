@@ -33,6 +33,20 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  filter: drop-shadow(0 0 .3em #ffffff31);
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  animation: fadeColor 1.5s ease;
+  color: rgb(199, 125, 125);
+}
+
+@keyframes fadeColor  {
+  0% {color: black;}
+  100% {color: rgb(199, 125, 125)}
 }
 
 button {
