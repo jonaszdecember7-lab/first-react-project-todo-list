@@ -39,6 +39,7 @@ function App() {
       <div className='todoListArea'>
         <h1>The Very Basic TODO LIST</h1>
         {quote && <h2 key={quote.text}>{quote.text}</h2>}
+        <h3>Total Item to Complete: {todoItem.length}</h3>
         <section className='inputArea'>
           <input id='text-input' type='text' value={userInput} onChange={handleUserInput} onKeyDown={(e) => e.key === 'Enter' && addTodoItem()} placeholder='Type here' />
           <button onClick={addTodoItem}>Add to List</button>
@@ -56,6 +57,7 @@ function App() {
             )
             }
           </ul>
+          {todoItem.length === 0 && <h4>"You have no tasks to do yet, add some! 🚀"</h4>}
         </section>
 
       </div>
